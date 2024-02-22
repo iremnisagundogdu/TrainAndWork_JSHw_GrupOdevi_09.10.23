@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Yönetim Sistemi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+
+    <!-- Ana Sayfa -->
+<div class="container">
+    <div class="col-12 col-sm-12 col-md-12">
+    <h1>Market Yönetim Sistemi</h1>
+
+    <div class="container bgBrown">
+        <!-- Ürün Alış butonuna tıklanınca kullanıcı adı ve şifre kontrolü yap -->
+        <button class="col-4 col-sm-12 col-md-4 btnBrown txtBrown m2 p1 fs-2" id="urunAlisButton">Ürün
+            Alışı</button>
+
+        <!-- Market Ürünleri butonuna tıklanınca kullanıcı adı ve şifre kontrolü yap -->
+        <button class="col-4 col-sm-12 col-md-4 btnGray txtGray m2 p1 fs-2" id="marketUrunleriButton">Market
+            Ürünleri</button>
+
+        <!-- Ürün Satış butonu-->
+        <button class="col-4 col-sm-12 col-md-4 btnYellow txtOrange m2 p1 fs-2" id="urunSatisButton">Ürün
+            Satışı</button>
+    </div>
+
+    <!-- Form Yapıları -->
+    <div>
+        <!-- Ürün Alışı -->
+        <div class="container">
+            <div class="container col-12">
+                <div class="col-12 col-sm-12 col-md-12; contact-form " id="urunAlisForm" style="display: none;">
+                    <h2 class="headiletisim p-1">Ürün Alışı</h2>
+                    <div class="form-group ">
+                        <h4 class="headiletisim p-1">Tedarikçi Ürünleri</h4>
+                        <table class="table table-hover col-3 col-sm-12 col-md-6 mt-0 mb-2 ">
+                            <thead>
+                                <tr>
+                                    <th>Ürün Adı</th>
+                                    <th>Stok</th>
+                                    <th>Alış Fiyatı</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tedarikciUrunTablosu"></tbody>
+                        </table>
+                    </div>
+                    <div class="form-group">
+                        <select id="alisYapilanUrun" class="col-3 col-sm-12 col-md-6 mt-4;"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alisAdet">Alınan Adet:</label>
+                        <input type="number" id="alisAdet" class="form-control bg-gray" min="1" value="1">
+                    </div>
+
+                    <button class=" bg-green txt-green p0 fs-2" id="alisYapButton">Alış Yap</button>
+
+                    <div class="form-group">
+                        <div class="mt-3 mb-3">
+                            <h4 class=" btnYellow txtOrange p1">Mevcut Sermaye: <strong><span
+                                        id="mevcutSermaye"></span></strong>
+                            </h4>
+                        </div>
+
+                        <h3 class="headiletisim">Alış Sepeti</h3>
+                        <table class="table table-hover4">
+                            <thead>
+                                <tr>
+                                    <th>Ürün Adı</th>
+                                    <th>Adet</th>
+                                    <th>Alış Fiyatı</th>
+                                    <th>Toplam Maliyet</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="alisSepetTablosu">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Ürünleri -->
+        <div class="container">
+            <div class="container col-12">
+        <div class=" col-12 col-sm-12 col-md-12; contact-form " id="marketUrunleri" style="display: none;">
+            <h2>Market Ürünleri</h2>
+            <table class="table  table-hover col-3 col-sm-3 col-md-6 ml-4">
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Stok</th>
+                        <th>Alış Fiyatı</th>
+                        <th>Satış Fiyatı</th>
+
+                    </tr>
+                </thead>
+                <tbody id="marketUrunTablosu"></tbody>
+            </table>
+            <div class="mt-3">
+                <h4 class="btnYellow txtYellow p1 fs-3">Marketin Toplam Bakiyesi: <strong><span
+                            id="ciro"></span></strong>
+                </h4>
+
+                <h4 class="btnPurple txtPurple fs-3 me5 p1">Marketin Toplam Kârı: <strong><span id="kar">0
+                            TL</span></strong> </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Ürün Satışı-->
+        <div class="container">
+            <div class="container col-12">
+                <div class=" col-12 col-sm-12 col-md-12; contact-form " id="urunSatisForm">
+                    <h2 class="headiletisim">Ürün Satışı</h2>
+                    <div class="form-group">
+                        <select id="urunListesi" class="col-3 col-sm-12 col-md-6 mt-4;"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adet">Adet:</label>
+                        <input type="number" id="adet" min="1" value="1">
+                    </div>
+
+                    <button class=" bg-green txt-green p0 fs-2" id="sepeteEkleButton">Sepete Ekle</button>
+
+                    <div class="form-group; col-sm-1">
+                        <h3 class="mt-3 mb-3">Sepet</h3>
+                        <table class="table  table-hover4 col-3 col-sm-3 col-md-6 ">
+                            <thead>
+                                <tr>
+                                    <th>Ürün Adı</th>
+                                    <th>Adet</th>
+                                    <th>Birim Fiyat</th>
+                                    <th>Toplam Fiyat</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-bordered" id="sepetTablosu"></tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <h3>Toplam Tutar: <span id="toplamTutar">0 TL</span></h3>
+                    </div>
+
+                    <button class="bg-dark-blue txt-dark-blue p0 fs-2" id="satinalButton">Satın Al</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-12">
+    <div class="container bgBrown mt-0">
+        <!-- Ürün Alış butonuna tıklanınca kullanıcı adı ve şifre kontrolü yap -->
+        <button class="col-4 col-sm-12 col-md-4 btnBrown txtBrown m2 p1 fs-2" id="urunAlisButton2">Ürün
+            Alışı</button>
+
+        <!-- Market Ürünleri butonuna tıklanınca kullanıcı adı ve şifre kontrolü yap -->
+        <button class="col-4 col-sm-12 col-md-4 btnGray txtGray m2 p1 fs-2" id="marketUrunleriButton2">Market
+            Ürünleri</button>
+
+        <!-- Ürün Satış butonu-->
+        <button class="col-4 col-sm-12 col-md-4 btnYellow txtOrange m2 p1 fs-2" id="urunSatisButton2">Ürün
+            Satışı</button>
+    </div>
+</div>
+
+    <script src="assets/js/script.js" async></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,2316 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.none {
+    display: none;
+}
+
+/*------------------------- 1- Grid Yapısı -------------------------*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
+
+.container .col-1 {
+    grid-column-end: span 1;
+    text-align: center;
+}
+
+.container .col-2 {
+    grid-column-end: span 2;
+    text-align: center;
+}
+
+.container .col-3 {
+    grid-column-end: span 3;
+    text-align: center;
+}
+
+.container .col-4 {
+    grid-column-end: span 4;
+    text-align: center;
+}
+
+.container .col-5 {
+    grid-column-end: span 5;
+    text-align: center;
+}
+
+.container .col-6 {
+    grid-column-end: span 6;
+    text-align: center;
+}
+
+.container .col-7 {
+    grid-column-end: span 7;
+    text-align: center;
+}
+
+.container .col-8 {
+    grid-column-end: span 8;
+    text-align: center;
+}
+
+.container .col-9 {
+    grid-column-end: span 9;
+    text-align: center;
+}
+
+.container .col-10 {
+    grid-column-end: span 10;
+    text-align: center;
+}
+
+.container .col-11 {
+    grid-column-end: span 11;
+    text-align: center;
+}
+
+.container .col-12 {
+    grid-column-end: span 12;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .container .col-md-1 {
+        grid-column-end: span 1;
+    }
+
+    .container .col-md-2 {
+        grid-column-end: span 2;
+    }
+
+    .container .col-md-3 {
+        grid-column-end: span 3;
+    }
+
+    .container .col-md-4 {
+        grid-column-end: span 4;
+    }
+
+    .container .col-md-5 {
+        grid-column-end: span 5;
+    }
+
+    .container .col-md-6 {
+        grid-column-end: span 6;
+    }
+
+    .container .col-md-7 {
+        grid-column-end: span 7;
+    }
+
+    .container .col-md-8 {
+        grid-column-end: span 8;
+    }
+
+    .container .col-md-9 {
+        grid-column-end: span 9;
+    }
+
+    .container .col-md-10 {
+        grid-column-end: span 10;
+    }
+
+    .container .col-md-11 {
+        grid-column-end: span 11;
+    }
+
+    .container .col-md-12 {
+        grid-column-end: span 12;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container .col-sm-1 {
+        grid-column-end: span 1;
+    }
+
+    .container .col-sm-2 {
+        grid-column-end: span 2;
+    }
+
+    .container .col-sm-3 {
+        grid-column-end: span 3;
+    }
+
+    .container .col-sm-4 {
+        grid-column-end: span 4;
+    }
+
+    .container .col-sm-5 {
+        grid-column-end: span 5;
+    }
+
+    .container .col-sm-6 {
+        grid-column-end: span 6;
+    }
+
+    .container .col-sm-7 {
+        grid-column-end: span 7;
+    }
+
+    .container .col-sm-8 {
+        grid-column-end: span 8;
+    }
+
+    .container .col-sm-9 {
+        grid-column-end: span 9;
+    }
+
+    .container .col-sm-10 {
+        grid-column-end: span 10;
+    }
+
+    .container .col-sm-11 {
+        grid-column-end: span 11;
+    }
+
+    .container .col-sm-12 {
+        grid-column-end: span 12;
+    }
+}
+
+
+
+/*------------------------- 2- Yazı rengi, arkaplan rengi, buton rengi -------------------------*/
+/* Ek CSS Library ROOT */
+:root {
+    /* 2. COLORS  */
+    /* Renk tonları 1 de en kalın ve daha büyük rakamlarda daha açık  */
+    /* Red */
+    --color-tone1-red: #420c09;
+    --color-tone2-red: #d802026b;
+    --color-tone3-red: #d80202;
+    --color-tone4-red: #b03a3a;
+    --color-tone5-red: #d99f9f;
+
+    /* Blue */
+    --color-tone1-blue: #00004d;
+    --color-tone2-blue: #1f80aa9b;
+    --color-tone3-blue: #26619c;
+    --color-tone4-blue: #48c9fc;
+    --color-tone5-blue: #87cfebd6;
+
+    /* Green */
+    --color-tone1-green: #14452F;
+    --color-tone2-green: #3DAC78;
+    --color-tone3-green: #83a381;
+    --color-tone4-green: #6fe2a3;
+    --color-tone5-green: #64e9ab;
+
+    /* Yellow */
+    --color-tone1-yellow: #7a7602;
+    --color-tone2-yellow: #a39e09;
+    --color-tone3-yellow: #f9e324;
+    --color-tone4-yellow: #FAF331;
+    --color-tone5-yellow: #f3efaa;
+
+    /* Purple */
+    --color-tone1-purple: #301934;
+    --color-tone2-purple: #5a026f;
+    --color-tone3-purple: #800080;
+    --color-tone4-purple: #c979d7d4;
+    --color-tone5-purple: #baa5dc;
+
+    /* Brown */
+    --color-tone1-brown: #673e01;
+    --color-tone2-brown: #7F4F24;
+    --color-tone3-brown: #936639;
+    --color-tone4-brown: #a88363;
+    --color-tone5-brown: #b6ad90;
+
+    /* Gray */
+    --color-tone1-gray: #343434;
+    --color-tone2-gray: #5a5a5a;
+    --color-tone3-gray: #939393;
+    --color-tone4-gray: #b6b6b6;
+    --color-tone5-gray: #d7d7d7;
+
+    /* Orange */
+    --color-tone1-orange: #F05E16;
+    --color-tone2-orange: #FA9C1B;
+    --color-tone3-orange: #e38500;
+    --color-tone4-orange: #F7BE6D;
+    --color-tone5-orange: #f6d7ac;
+
+    /* Pink */
+    --color-tone1-pink: #780135;
+    --color-tone2-pink: #a23062;
+    --color-tone3-pink: #aa1556;
+    --color-tone4-pink: #ab4672b8;
+    --color-tone5-pink: #c6347192;
+
+    /* White */
+    --color-tone1-white: #3d3d3d;
+    --color-tone2-white: #5f5f5f;
+    --color-tone3-white: #a19b9b;
+    --color-tone4-white: #dec1cc;
+    --color-tone5-white: #ffffd3;
+    --color-tone6-white: #f5f5f5;
+}
+
+/* Red */
+.bgRed {
+    background-color: var(--color-tone1-red);
+}
+
+.txtRed {
+    color: var(--color-tone5-red) !important;
+}
+
+.btnRed {
+    background-color: var(--color-tone5-red);
+    transition: background-color 1s;
+}
+
+.btnRed:hover {
+    background-color: var(--color-tone4-red) !important;
+}
+
+/* Blue */
+.bgBlue {
+    background-color: var(--color-tone1-blue);
+}
+
+.txtBlue {
+    color: var(--color-tone4-blue) !important;
+}
+
+.btnBlue {
+    border-radius: 10px;
+    background-color: var(--color-tone3-blue);
+    transition: background-color 1s;
+}
+
+.btnBlue:hover {
+    background-color: var(--color-tone2-blue) !important;
+}
+
+/* Green */
+
+.bgGreen {
+    background-color: var(--color-tone1-green);
+}
+
+.txtGreen {
+    color: var(--color-tone3-green);
+
+}
+
+.btnGreen {
+    background-color: var(--color-tone2-green);
+    transition: background-color 1s;
+}
+
+.btnGreen:hover {
+    background-color: var(--color-tone5-green);
+}
+
+/* Yellow */
+.bgYellow {
+    background-color: var(--color-tone3-yellow);
+}
+
+.txtYellow {
+    color: var(--color-tone1-yellow);
+
+}
+
+.btnYellow {
+    border-radius: 5px;
+    background-color: var(--color-tone3-yellow);
+    transition: background-color 1s;
+}
+
+.btnYellow:hover {
+    background-color: var(--color-tone5-yellow) !important;
+}
+
+/* Purple */
+.bgPurple {
+    background-color: var(--color-tone3-purple);
+}
+
+.txtPurple {
+    color: var(--color-tone1-purple) !important;
+}
+
+.btnPurple {
+    border-radius: 5px;
+    background-color: var(--color-tone4-purple);
+    transition: background-color 1s;
+}
+
+.btnPurple:hover {
+    background-color: var(--color-tone5-purple);
+}
+
+/* Brown */
+.bgBrown {
+    background-color: var(--color-tone5-brown);
+}
+
+
+.txtBrown {
+    color: var(--color-tone1-brown);
+}
+
+.btnBrown {
+    border-radius: 5px;
+    background-color: var(--color-tone4-brown);
+    transition: background-color 1s;
+
+}
+
+.btnBrown:hover {
+    background-color: var(--color-tone3-brown);
+}
+
+/* Gray */
+.bgGray {
+    background-color: var(--color-tone5-gray);
+}
+
+.txtGray {
+    color: var(--color-tone1-gray);
+
+}
+
+.btnGray {
+    border-radius: 5px;
+
+    background-color: var(--color-tone3-gray);
+    transition: background-color 1s;
+
+}
+
+.btnGray:hover {
+    background-color: var(--color-tone4-gray) !important;
+
+}
+
+/* Orange */
+.bgOrange {
+    background-color: var(--color-tone4-orange);
+}
+
+
+.txtOrange {
+    color: var(--color-tone1-orange);
+}
+
+.btnOrange {
+    border-radius: 5px;
+    background-color: var(--color-tone2-orange);
+    transition: background-color 1s;
+}
+
+.btnOrange:hover {
+    background-color: var(--color-tone3-orange);
+}
+
+/* Pink */
+.bgPink {
+    background-color: var(--color-tone4-pink);
+}
+
+.txtPink {
+    color: var(--color-tone1-pink);
+
+}
+
+.btnPink {
+    background-color: var(--color-tone5-pink);
+    transition: background-color 1s;
+}
+
+.btnPink:hover {
+    background-color: var(--color-tone3-pink);
+}
+
+/* White */
+.bgWhite {
+    background-color: var(--color-tone6-white);
+}
+
+.txtWhite {
+    color: var(--color-tone4-white);
+}
+
+.btnWhite {
+    background-color: var(--color-tone5-white);
+    transition: background-color 1s;
+}
+
+.btnWhite:hover {
+    background-color: var(--color-tone3-white);
+}
+
+
+
+
+
+
+
+
+
+
+/* Gri Tonları */
+.bg-gray {
+    background-color: rgb(221, 216, 216) !important;
+}
+
+.txt-gray {
+    color: rgb(95, 91, 91) !important;
+}
+
+.btn-gray:hover {
+    background-color: rgb(130, 122, 122) !important;
+}
+
+/* Kırmızı Tonları */
+.bg-red {
+    background-color: rgb(243, 34, 34) !important;
+}
+
+.txt-red {
+    color: rgb(126, 16, 16) !important;
+}
+
+.btn-red:hover {
+    background-color: rgb(190, 26, 26) !important;
+}
+
+/* Lacivert Tonları */
+.bg-dark-blue {
+    background-color: rgb(41, 88, 230) !important;
+    border-radius: 5px;
+}
+
+.txt-dark-blue {
+    color: rgb(215, 222, 243) !important;
+}
+
+.bg-dark-blue:hover {
+    background-color: rgb(38, 72, 174) !important;
+}
+
+/* Yeşil Tonları */
+.bg-green {
+    border-radius: 5px;
+    background-color: rgb(27, 132, 36) !important;
+}
+
+.txt-green {
+    color: rgb(190, 250, 195) !important;
+}
+
+.bg-green:hover {
+    background-color: rgb(12, 170, 25) !important;
+}
+
+/* Turkuaz Tonları */
+.bg-turquoise {
+    background-color: rgb(34, 222, 243) !important;
+}
+
+.txt-turquoise {
+    color: rgb(22, 120, 131) !important;
+}
+
+.btn-turquoise:hover {
+    background-color: rgb(36, 180, 196) !important;
+}
+
+/* Mor Tonları */
+.bg-purple {
+    background-color: rgb(178, 49, 252) !important;
+}
+
+.txt-purple {
+    color: rgb(77, 21, 109) !important;
+}
+
+.btn-purple:hover {
+    background-color: rgb(137, 42, 193) !important;
+}
+
+/* Turuncu Tonları */
+.bg-orange {
+    background-color: rgb(255, 135, 43) !important;
+}
+
+.txt-orange {
+    color: rgb(160, 72, 5) !important;
+}
+
+.btn-orange:hover {
+    background-color: rgb(205, 96, 13) !important;
+}
+
+/* Sarı Tonları */
+.bg-yellow {
+    background-color: rgb(255, 237, 35) !important;
+}
+
+.txt-yellow {
+    color: rgb(144, 134, 24) !important;
+}
+
+.btn-yellow:hover {
+    background-color: rgb(198, 185, 40) !important;
+}
+
+/* Pembe Tonları */
+.bg-pink {
+    background-color: rgb(250, 105, 253) !important;
+}
+
+.txt-pink {
+    color: rgb(171, 7, 174) !important;
+}
+
+.btn-pink:hover {
+    background-color: rgb(222, 49, 225) !important;
+}
+
+/* Mavi Tonları */
+.bg-blue {
+    background-color: rgb(123, 187, 252) !important;
+}
+
+.txt-blue {
+    color: rgb(54, 78, 102) !important;
+}
+
+.btn-blue:hover {
+    background-color: rgb(103, 145, 187) !important;
+}
+
+/*--------------------------------------- 3- Yazı Boyutu ---------------------------------------*/
+
+/* Metin tipi yazı boyutu */
+.fs-1 {
+    font-size: 14px !important;
+}
+
+.fs-2 {
+    font-size: 17px !important;
+}
+
+.fs-3 {
+    font-size: 20px !important;
+}
+
+.fs-4 {
+    font-size: 23px !important;
+}
+
+.fs-5 {
+    font-size: 26px !important;
+}
+
+.fs-6 {
+    font-size: 29px !important;
+}
+
+.fs-7 {
+    font-size: 32px !important;
+}
+
+.fs-8 {
+    font-size: 35px !important;
+}
+
+.fs-9 {
+    font-size: 38px !important;
+}
+
+.fs-10 {
+    font-size: 41px !important;
+}
+
+/* Başlık tipi yazı boyutu */
+.fsh-1 {
+    font-size: 28px !important;
+}
+
+.fsh-2 {
+    font-size: 34px !important;
+}
+
+.fsh-3 {
+    font-size: 40px !important;
+}
+
+.fsh-4 {
+    font-size: 44px !important;
+}
+
+.fsh-5 {
+    font-size: 48px !important;
+}
+
+/*--------------------------------------- 4- Yazı Tipi ---------------------------------------*/
+
+.ff-1 {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.ff-2 {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.ff-3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.ff-4 {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.ff-5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+
+/*--------------------------------------- 5- Margin & Padding ---------------------------------------*/
+
+/* Kullanılacak olan margin & padding değerleri */
+:root {
+    --mp5: 55px;
+    --mp4: 45px;
+    --mp3: 35px;
+    --mp2: 25px;
+    --mp1: 15px;
+    --mp0: 5px;
+}
+
+/* Margin 5 (55px) */
+.m5 {
+    margin: var(--mp5) !important;
+}
+
+.mt5 {
+    margin-bottom: var(--mp5) !important;
+}
+
+.mb5 {
+    margin-top: var(--mp5) !important;
+}
+
+.ms5 {
+    margin-left: var(--mp5) !important;
+}
+
+.me5 {
+    margin-right: var(--mp5) !important;
+}
+
+
+/* Margin 4 (45px) */
+.m4 {
+    margin: var(--mp4) !important;
+}
+
+.mt4 {
+    margin-bottom: var(--mp4) !important;
+}
+
+.mb4 {
+    margin-top: var(--mp4) !important;
+}
+
+.ms4 {
+    margin-left: var(--mp4) !important;
+}
+
+.me4 {
+    margin-right: var(--mp4) !important;
+}
+
+/* Margin 3 (35px) */
+.m3 {
+    margin: var(--mp3) !important;
+}
+
+.mt3 {
+    margin-bottom: var(--mp3) !important;
+}
+
+.mb3 {
+    margin-top: var(--mp3) !important;
+}
+
+.ms3 {
+    margin-left: var(--mp3) !important;
+}
+
+.me3 {
+    margin-right: var(--mp3) !important;
+}
+
+/* Margin 2 (25px) */
+.m2 {
+    margin: var(--mp2) !important;
+}
+
+.mt2 {
+    margin-bottom: var(--mp2) !important;
+}
+
+.mb2 {
+    margin-top: var(--mp2) !important;
+}
+
+.ms2 {
+    margin-left: var(--mp2) !important;
+}
+
+.me2 {
+    margin-right: var(--mp2) !important;
+}
+
+/* Margin 1 (15px) */
+.m1 {
+    margin: var(--mp1) !important;
+}
+
+.mt1 {
+    margin-bottom: var(--mp1) !important;
+}
+
+.mb1 {
+    margin-top: var(--mp1) !important;
+}
+
+.ms1 {
+    margin-left: var(--mp1) !important;
+}
+
+.me1 {
+    margin-right: var(--mp1) !important;
+}
+
+/* Margin 0 (5px) */
+.m0 {
+    margin: var(--mp0) !important;
+}
+
+.mt0 {
+    margin-bottom: var(--mp0) !important;
+}
+
+.mb0 {
+    margin-top: var(--mp0) !important;
+}
+
+.ms0 {
+    margin-left: var(--mp0) !important;
+}
+
+.me0 {
+    margin-right: var(--mp0) !important;
+}
+
+
+/* Padding 5 (55px) */
+.p5 {
+    padding: var(--mp5) !important;
+}
+
+.pt5 {
+    padding-bottom: var(--mp5) !important;
+}
+
+.pb5 {
+    padding-top: var(--mp5) !important;
+}
+
+.ps5 {
+    padding-left: var(--mp5) !important;
+}
+
+.pe5 {
+    padding-right: var(--mp5) !important;
+}
+
+
+/* Padding 4 (45px) */
+.p4 {
+    padding: var(--mp4) !important;
+}
+
+.pt4 {
+    padding-bottom: var(--mp4) !important;
+}
+
+.pb4 {
+    padding-top: var(--mp4) !important;
+}
+
+.ps4 {
+    padding-left: var(--mp4) !important;
+}
+
+.pe4 {
+    padding-right: var(--mp4) !important;
+}
+
+/* Padding 3 (35px) */
+.p3 {
+    padding: var(--mp3) !important;
+}
+
+.pt3 {
+    padding-bottom: var(--mp3) !important;
+}
+
+.pb3 {
+    padding-top: var(--mp3) !important;
+}
+
+.ps3 {
+    padding-left: var(--mp3) !important;
+}
+
+.pe3 {
+    padding-right: var(--mp3) !important;
+}
+
+/* Padding 2 (25px) */
+.p2 {
+    padding: var(--mp2) !important;
+}
+
+.pt2 {
+    padding-bottom: var(--mp2) !important;
+}
+
+.pb2 {
+    padding-top: var(--mp2) !important;
+}
+
+.ps2 {
+    padding-left: var(--mp2) !important;
+}
+
+.pe2 {
+    padding-right: var(--mp2) !important;
+}
+
+/* Padding 1 (15px) */
+.p1 {
+    padding: var(--mp1) !important;
+}
+
+.pt1 {
+    padding-bottom: var(--mp1) !important;
+}
+
+.pb1 {
+    padding-top: var(--mp1) !important;
+}
+
+.ps1 {
+    padding-left: var(--mp1) !important;
+}
+
+.pe1 {
+    padding-right: var(--mp1) !important;
+}
+
+/* Padding 0 (5px) */
+.p0 {
+    padding: var(--mp0) !important;
+}
+
+.pt0 {
+    padding-bottom: var(--mp0) !important;
+}
+
+.pb0 {
+    padding-top: var(--mp0) !important;
+}
+
+.ps0 {
+    padding-left: var(--mp0) !important;
+}
+
+.pe0 {
+    padding-right: var(--mp0) !important;
+}
+
+/*------------------------- 6- Slider -------------------------*/
+/* Durmayan akış slider */
+.slider-ns-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-ns {
+    display: flex;
+    animation: slide-ns 20s linear infinite;
+    scroll-behavior: smooth;
+}
+
+.slide-ns {
+    flex: 0 0 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-center {
+    overflow: hidden;
+    display: table-cell;
+}
+
+.img-center img {
+    width: 900px;
+    height: 500px;
+    vertical-align: baseline;
+}
+
+@keyframes slide-ns {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-100%);
+    }
+
+    40% {
+        transform: translateX(-200%);
+    }
+
+    60% {
+        transform: translateX(-200%);
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Soldan sağa beklemeli slider */
+.slider-s {
+    overflow: hidden;
+}
+
+.slider-s .slider-cont {
+    position: relative;
+    width: 500%;
+    margin: 0px;
+    animation: 20s slider-s linear infinite;
+}
+
+.slider-cont img {
+    width: 20%;
+    height: 70%;
+    float: left;
+}
+
+@keyframes slider-s {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+
+
+/* Yukarıdan aşağıya beklemeli slider */
+
+.slider-ud {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-ud .slider-ud-cont {
+    position: absolute;
+    height: 500%;
+    margin: 0px;
+    animation: 20s slider-ud linear infinite;
+}
+
+.slider-ud-cont img {
+    height: 20%;
+    width: 100%;
+    float: top;
+}
+
+@keyframes slider-ud {
+    0% {
+        top: 0;
+    }
+
+    20% {
+        top: 0;
+    }
+
+    25% {
+        top: -100%;
+    }
+
+    45% {
+        top: -100%;
+    }
+
+    50% {
+        top: -200%;
+    }
+
+    70% {
+        top: -200%;
+    }
+
+    75% {
+        top: -300%;
+    }
+
+    95% {
+        top: -300%;
+    }
+
+    100% {
+        top: -400%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* ns */
+    .slider-ns-container {
+        width: 100%;
+    }
+
+    .slide-ns {
+        flex: 0 0 100%;
+        height: 250px;
+    }
+
+    .img-center img {
+        width: 450px;
+        height: 250px;
+    }
+
+    /* s */
+    .slider-s .slider-cont {
+        width: 500%;
+    }
+
+    .slider-cont img {
+        width: 20%;
+        height: 400px;
+    }
+
+    /* ud */
+    .slider-ud {
+        width: 100%;
+        height: 400px;
+    }
+
+    .slider-ud .slider-ud-cont {
+        height: 500%;
+        margin: 0px;
+    }
+
+    .slider-ud-cont img {
+        height: 20%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ns */
+    .slider-ns-container {
+        width: 100%;
+    }
+
+    .slide-ns {
+        flex: 0 0 100%;
+        height: 150px;
+    }
+
+    .img-center img {
+        width: 200px;
+        height: 100px;
+    }
+
+    /* s */
+    .slider-s .slider-cont {
+        width: 500%;
+    }
+
+    .slider-cont img {
+        width: 20%;
+        height: 250px;
+    }
+
+    /* ud */
+    .slider-ud {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slider-ud .slider-ud-cont {
+        height: 500%;
+        margin: 0px;
+    }
+
+    .slider-ud-cont img {
+        height: 20%;
+        width: 100%;
+    }
+}
+
+
+/*--------------------------------------- 7-Tablolar ---------------------------------------*/
+
+/* Kenarlıklı Tablo */
+.table-border {
+    width: 50%;
+    background-color: rgb(243, 159, 41);
+    border: 3px solid black !important;
+    border-collapse: collapse !important;
+}
+
+.table-border,
+.table-border td,
+.table-border th {
+    border: solid 1px black;
+}
+
+.table-border th {
+    height: 60px;
+    text-align: center;
+}
+
+.table-border td {
+    height: 30px;
+    text-align: center;
+}
+
+/* Striped Tablo */
+
+.table-striped {
+    width: 50%;
+    background-color: rgb(0, 85, 141);
+    border-collapse: collapse;
+}
+
+.table-striped th {
+    height: 60px;
+    text-align: center;
+}
+
+.table-striped td {
+    height: 30px;
+    text-align: center;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: aqua !important;
+}
+
+/* Hoverable Tablo */
+.table-hover {
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgb(116, 182, 176);
+    color: black;
+    border-collapse: collapse !important;
+    border-radius: 3px;
+}
+
+.table-hover th {
+    height: 60px;
+    text-align: center;
+
+}
+
+.table-hover td {
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-hover td:hover,
+.table-hover th:hover {
+    background-color: rgb(45, 99, 95);
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Hoverable Tablo 2*/
+/* Brown */
+
+.table-hover2 {
+    border-radius: 10px;
+    width: 50%;
+    background-color: var(--color-tone4-brown);
+    margin: 55px !important;
+    color: black;
+    border-collapse: collapse !important;
+}
+
+.table-hover2 th {
+    height: 60px;
+    padding: 10px 30px 0px 30px !important;
+    text-align: center;
+
+}
+
+.table-hover2 td {
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-hover2 td:hover,
+.table-hover2 th:hover {
+    background-color: var(--color-tone5-brown);
+    color: var(--color-tone1-brown);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Hoverable Tablo 3*/
+/* White */
+
+.table-hover3 {
+    border-radius: 10px;
+    width: 50%;
+    background-color: var(--color-tone4-white);
+    color: black;
+    border-collapse: collapse !important;
+}
+
+.table-hover3 th {
+    height: 60px;
+    text-align: center;
+
+}
+
+.table-hover3 td {
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-hover3 td:hover,
+.table-hover3 th:hover {
+    background-color: var(--color-tone5-white);
+    color: var(--color-tone1-white);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Hoverable Tablo 4*/
+/* Pink */
+
+.table-hover4 {
+    border-radius: 10px;
+    width: 50%;
+    background-color: var(--color-tone5-pink);
+    margin-left: 40px !important;
+    color: var(--color-tone1-pink);
+    border-collapse: collapse !important;
+}
+
+.table-hover4 th {
+    height: 60px;
+    /* margin: 15px !important; */
+    padding-left: 30px;
+    text-align: center;
+}
+
+.table-hover4 tr {
+    height: 30px;
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-hover4 td {
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-hover4 td:hover,
+.table-hover4 th:hover {
+    background-color: var(--color-tone4-pink);
+    color: var(--color-tone1-pink);
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .table-hover,
+    .table-hover4,
+    .table-border,
+    .table-striped {
+        width: 100%;
+        margin: 10px !important;
+    }
+
+    .table-hover4 th {
+        padding-left: 10px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .table-hover,
+    .table-hover4,
+    .table-border,
+    .table-striped {
+        width: 100%;
+        margin: 5px !important;
+    }
+
+    .table-hover2 {
+        width: 50%;
+        margin: 0px !important;
+    }
+
+    .table-hover4 th,
+    .table-hover2 {
+
+        padding-left: 0px !important;
+    }
+}
+
+/*--------------------------------------- 8-Resimler ---------------------------------------*/
+
+.img-br {
+    width: 50%;
+}
+
+.img-br img {
+    width: 100%;
+    border-radius: 9%;
+}
+
+
+.img-st {
+    width: 50%;
+}
+
+.img-st img {
+    width: 100%;
+}
+
+@media screen and (max-width:1024px) {
+
+    .img-br {
+        width: 50%;
+    }
+
+    .img-br img {
+        width: 100%;
+    }
+
+
+    .img-st {
+        width: 50%;
+    }
+
+    .img-st img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .img-br {
+        width: 50%;
+    }
+
+    .img-br img {
+        width: 100%;
+    }
+
+
+    .img-st {
+        width: 50%;
+    }
+
+    .img-st img {
+        width: 100%;
+    }
+
+}
+
+/*--------------------------------------- 9-Butonlar ---------------------------------------*/
+
+/* Kırmızı solid buton */
+.btn-s-red {
+    background-color: rgb(228, 10, 10);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-red:hover {
+    background-color: rgb(236, 46, 46);
+}
+
+/* Kırmızı saydam buton */
+.btn-out-red {
+    background-color: rgba(228, 10, 10, 0.2);
+    color: rgb(233, 21, 21);
+    border-radius: 4px;
+    border: 1px solid rgb(228, 10, 10);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-red:hover {
+    background-color: rgb(228, 10, 10);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Lacivert solid buton */
+.btn-s-dark-blue {
+    background-color: rgb(21, 2, 129);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-dark-blue:hover {
+    background-color: rgb(58, 35, 189);
+}
+
+/* Lacivert saydam buton */
+.btn-out-dark-blue {
+    background-color: rgba(21, 2, 129, 0.2);
+    color: rgb(21, 2, 129);
+    border-radius: 4px;
+    border: 1px solid rgb(21, 2, 129);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-dark-blue:hover {
+    background-color: rgb(21, 2, 129);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Yeşil solid buton */
+.btn-s-green {
+    background-color: rgb(2, 129, 4);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-green:hover {
+    background-color: rgb(13, 176, 16);
+}
+
+/* Yeşil saydam buton */
+.btn-out-green {
+    background-color: rgba(2, 129, 4, 0.2);
+    color: rgb(2, 129, 4);
+    border-radius: 4px;
+    border: 1px solid rgb(2, 129, 4);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-green:hover {
+    background-color: rgb(2, 129, 4);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Sarı solid buton */
+.btn-s-yellow {
+    background-color: rgb(255, 247, 0);
+    color: black;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-yellow:hover {
+    background-color: rgb(246, 239, 55);
+}
+
+/* Sarı saydam buton */
+.btn-out-yellow {
+    background-color: rgba(246, 240, 55, 0.2);
+    color: rgb(134, 129, 10);
+    border-radius: 4px;
+    border: 1px solid rgb(246, 239, 55);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-yellow:hover {
+    background-color: rgb(255, 247, 0);
+    color: black;
+    transition: 0.4s;
+}
+
+/* Turuncu solid buton */
+.btn-s-orange {
+    background-color: rgb(255, 174, 0);
+    color: black;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-orange:hover {
+    background-color: rgb(248, 178, 28);
+}
+
+/* Turuncu saydam buton */
+.btn-out-orange {
+    background-color: rgba(255, 174, 0, 0.2);
+    color: rgb(184, 129, 11);
+    border-radius: 4px;
+    border: 1px solid rgb(248, 178, 28);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-orange:hover {
+    background-color: rgb(248, 178, 28);
+    color: black;
+    transition: 0.4s;
+}
+
+/* Gri solid buton */
+.btn-s-gray {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-gray:hover {
+    background-color: rgb(146, 140, 140);
+}
+
+/* Gri saydam buton */
+.btn-out-gray {
+    background-color: rgba(100, 100, 100, 0.2);
+    color: rgb(100, 100, 100);
+    border-radius: 4px;
+    border: 1px solid rgb(100, 100, 100);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-gray:hover {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Mor solid buton */
+.btn-s-purple {
+    background-color: rgb(136, 0, 138);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-purple:hover {
+    background-color: rgb(183, 5, 186);
+}
+
+/* Mor saydam buton */
+.btn-out-purple {
+    background-color: rgba(136, 0, 138, 0.2);
+    color: rgb(136, 0, 138);
+    border-radius: 4px;
+    border: 1px solid rgb(136, 0, 138);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-purple:hover {
+    background-color: rgb(88, 28, 8);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Kahverengi solid buton */
+.btn-s-brown {
+    background-color: rgb(87, 33, 0);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-brown:hover {
+    background-color: rgb(116, 53, 14);
+}
+
+/* Kahverengi saydam buton */
+.btn-out-brown {
+    background-color: rgba(87, 33, 0, 0.2);
+    color: rgb(87, 33, 0);
+    border-radius: 4px;
+    border: 1px solid rgb(87, 33, 0);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-brown:hover {
+    background-color: rgb(87, 33, 0);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Mavi solid buton */
+.btn-s-blue {
+    background-color: rgb(86, 130, 170);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-blue:hover {
+    background-color: rgb(126, 167, 204);
+}
+
+/* Mavi saydam buton */
+.btn-out-blue {
+    background-color: rgba(86, 129, 170, 0.2);
+    color: rgb(86, 130, 170);
+    border-radius: 4px;
+    border: 1px solid rgb(86, 130, 170);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-blue:hover {
+    background-color: rgb(86, 130, 170);
+    color: white;
+    transition: 0.4s;
+}
+
+/* Pembe solid buton */
+.btn-s-pink {
+    background-color: rgb(195, 49, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-s-pink:hover {
+    background-color: rgb(211, 70, 143);
+}
+
+/* Pembe saydam buton */
+.btn-out-pink {
+    background-color: rgba(195, 49, 124, 0.2);
+    color: rgb(195, 49, 124);
+    border-radius: 4px;
+    border: 1px solid rgb(195, 49, 124);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.btn-out-pink:hover {
+    background-color: rgb(195, 49, 124);
+    color: white;
+    transition: 0.4s;
+}
+
+/*--------------------------------------- 10-Resimler ---------------------------------------*/
+
+/* Resmin ortalanmış hali */
+.img-ovf-ct {
+    width: calc(50% - 32px);
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 8px;
+    padding: 8px;
+    background-color: rgb(210, 119, 7);
+}
+
+.img-ovf-ct img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: baseline;
+}
+
+/* Resmin yüksekliğe göre ortalanmış hali */
+
+.img-ovf-h {
+    width: calc(50% - 32px);
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: 8px;
+    padding: 8px;
+    background-color: rgb(210, 119, 7);
+}
+
+.img-ovf-h img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Resmin genişliğe göre ortalanmış hali */
+
+.img-ovf-w {
+    width: 600px;
+    height: calc(50% - 32px);
+    overflow: hidden;
+    position: relative;
+    margin: 8px;
+    padding: 8px;
+    background-color: rgb(210, 119, 7);
+}
+
+.img-ovf-w img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Resmin orijinal boyutuna göre hidden */
+.img-ovf-o {
+    width: calc(80% - 32px);
+    height: calc(80% - 32px);
+    overflow: hidden;
+    margin: 8px;
+    padding: 8px;
+    background-color: rgb(210, 119, 7);
+}
+
+@media screen and (max-width: 1024px) {
+    .img-ovf-o {
+        width: calc(80% - 32px);
+        height: calc(80% - 32px);
+    }
+
+    .img-ovf-w {
+        width: 400px;
+        height: calc(50% - 32px);
+    }
+
+    .img-ovf-w img {
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-ovf-h {
+        width: calc(50% - 32px);
+        height: 400px;
+    }
+
+    .img-ovf-h img {
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-ovf-ct {
+        width: calc(50% - 32px);
+    }
+
+    .img-ovf-ct img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-ovf-o {
+        width: calc(80% - 32px);
+        height: calc(80% - 32px);
+    }
+
+    .img-ovf-w {
+        width: 200px;
+        height: calc(50% - 32px);
+    }
+
+    .img-ovf-w img {
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-ovf-h {
+        width: calc(50% - 32px);
+        height: 600px;
+    }
+
+    .img-ovf-h img {
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img-ovf-ct {
+        width: calc(50% - 32px);
+    }
+
+    .img-ovf-ct img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/*--------------------------------------- 11-Nav Menü ---------------------------------------*/
+
+/* _____________Fixed Menü Sola Dayalı_____________*/
+.fix-nav-item {
+    width: calc(15% - 15px);
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    padding: 15px;
+    background-color: rgb(147, 178, 231) !important;
+}
+
+.fix-nav-item .fix-navbar {
+    list-style: none;
+    padding: 0px;
+}
+
+.fix-nav-item .fix-navbar li {
+    padding: 15px;
+    text-align: center;
+}
+
+.fix-nav-item .fix-navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.fix-nav-item .fix-navbar li a:hover {
+    color: rgb(216, 29, 29);
+}
+
+/* _____________Normal Menü Sola Dayalı_____________*/
+
+.nav-item {
+    width: calc(15% - 15px);
+    height: 100%;
+    position: block;
+    padding: 15px;
+    background-color: rgb(147, 178, 231) !important;
+}
+
+.nav-item .navbar {
+    list-style: none;
+    padding: 0px;
+}
+
+.nav-item .navbar li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-item .navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.nav-item .navbar li a:hover {
+    color: rgb(216, 29, 29);
+}
+
+/* _____________Üst Menü _____________*/
+
+.inl-nav-item {
+    width: calc(100% - 50px);
+    height: 50px;
+    padding: 25px;
+    background-color: #5d5b5ee7 !important;
+}
+
+.inl-nav-item .inl-navbar {
+    list-style: none;
+}
+
+.inl-nav-item .inl-navbar li {
+    display: inline;
+    padding: 25px;
+    border-right: solid 1px red;
+}
+
+.inl-nav-item .inl-navbar li a {
+    text-decoration: none;
+    padding: 25px 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.inl-nav-item .inl-navbar li a:hover {
+    color: #faa907;
+    transition: 0.3s;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-item .navbar li {
+        width: calc(100% - 30px);
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .nav-item {
+        width: 18%;
+        height: 100%;
+    }
+
+    .fix-navbar li {
+        width: calc(100% - 30px);
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .fix-nav-item {
+        width: 18%;
+        height: 100%;
+    }
+
+    .inl-nav-item {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item .navbar li {
+        width: calc(100% - 30px);
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .nav-item {
+        width: 18%;
+        height: 100%;
+    }
+
+    .fix-navbar li {
+        width: calc(100% - 30px);
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .fix-nav-item {
+        width: 18%;
+        height: 100%;
+    }
+
+    .inl-nav-item {
+        width: calc(100% - 50px);
+        overflow: auto;
+    }
+}
+
+
+/*--------------------------------------- 12-Dropdown Menü ---------------------------------------*/
+
+/* Navbar Menü Özellikleri*/
+
+.drp-nav-item {
+    width: calc(100% - 50px);
+    height: 50px;
+    padding: 25px;
+    background-color: #5d5b5e !important;
+    justify-content: top !important;
+}
+
+.drp-nav-item .drp-navbar {
+    list-style: none;
+}
+
+.drp-nav-item .drp-navbar .menu-drop,
+.drp-nav-item .drp-navbar li {
+    display: inline;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.drp-nav-item .drp-navbar .menu-drop .drp-menu,
+.drp-nav-item .drp-navbar li a {
+    text-decoration: none;
+    padding: 25px 15px 45px 45px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.menu-drop:hover .dropdown li:hover,
+.drp-nav-item .drp-navbar .menu-drop .drp-menu:hover,
+.drp-nav-item .drp-navbar li a:hover {
+    color: #faa907;
+    transition: 0.3s;
+}
+
+/* Dropdown Menü Özellikleri */
+.dropdown {
+    width: 150px;
+    height: auto;
+    margin-top: 38px;
+    margin-left: 20px;
+    display: none;
+    position: absolute;
+    padding: 10px !important;
+    background-color: #5d5b5e !important;
+    border: none !important;
+}
+
+.menu-drop .dropdown {
+    list-style: none;
+    padding-left: 0;
+    border: none !important;
+}
+
+.menu-drop .dropdown li {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.menu-drop:hover .dropdown {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .drp-nav-item {
+        width: calc(100% - 50px);
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .drp-nav-item {
+        width: calc(100% - 50px);
+        height: 50px;
+    }
+}
+
+
+/*--------------------------------------- 13- Form Yapısı ---------------------------------------*/
+.contact-form .headiletisim {
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Nunito Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    max-width: 400px;
+    align-items: center;
+    margin: 45px auto 45px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.contact-form .form-group input,
+textarea {
+    width: calc(30% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: "Nunito Sans", sans-serif;
+    resize: none;
+}
+
+
+.contact-form .form-group select {
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: "Nunito Sans", sans-serif;
+    resize: none;
+}
+
+.contact-form table {
+    margin-left: 100px;
+}
+
+/* .contact-form button {
+    background-color: black;
+    color: #faa907;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+} */
+
+/* .contact-form button:hover {
+    color: black;
+    background-color: #faa907;
+    transition: 0.5s;
+} */
+
+
+@media screen and (max-width: 1024px) {
+
+    .contact-form .form-group input,
+    textarea {
+        width: calc(30% - 20px);
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        max-width: 200px;
+    }
+
+    .contact-form .form-group input,
+    textarea {
+        width: calc(30% - 20px);
+    }
+
+    .contact-form .form-group input {
+        max-height: 25px;
+    }
+
+    .contact-form .form-group label {
+        font-size: 12px;
+    }
+
+
+    .contact-form .form-group select {
+        width: calc(100% - 20px);
+        font-size: 12px;
+    }
+
+    .contact-form .form-group select option {
+        width: calc(50% - 20px) !important;
+        font-size: 10px !important;
+    }
+
+}
